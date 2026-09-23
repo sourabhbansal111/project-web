@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="finance-panel">
+
+    <h2>💰 City Treasury</h2>
+
+    <div class="finance-grid">
+
+        <div class="finance-card">
+            <span>Daily Income</span>
+            <strong id="dailyIncome">₹0</strong>
+        </div>
+
+        <div class="finance-card">
+            <span>Daily Expenses</span>
+            <strong id="dailyExpenses">₹0</strong>
+        </div>
+
+        <div class="finance-card">
+            <span>Daily Profit</span>
+            <strong id="dailyProfit">₹0</strong>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="finance-panel">
+
+    <h2>📜 Financial History</h2>
+
+    <div id="transactions">
+
+        <p>No transactions yet.</p>
+
+    </div>
+
+</div>
+
+
+<div id="message"></div>
+
+<button
+    type="button"
+    onclick="endDay()"
+>
+    ☀️ End Day
+</button>
+</body>
+</html>

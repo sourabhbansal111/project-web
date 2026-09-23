@@ -1,0 +1,70 @@
+.finance-panel {
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.finance-panel h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.finance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.finance-card {
+    background: #1f2937;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.finance-card span {
+    display: block;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.finance-card strong {
+    font-size: 20px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+}
+
+.transaction small {
+    display: block;
+    color: #94a3b8;
+    margin-top: 3px;
+}
+
+#message {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fbbf24;
+}
+
+@media (max-width: 600px) {
+
+    .finance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transaction {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+}
