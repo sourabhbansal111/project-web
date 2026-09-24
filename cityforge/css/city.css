@@ -1,0 +1,673 @@
+/* =====================================
+   CITY GAME
+===================================== */
+
+.game-body {
+
+    background:
+        #182b1d;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.game-header {
+
+    height:
+        70px;
+
+    background:
+        #101a13;
+
+    border-bottom:
+        2px solid #304936;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        0 20px;
+
+    gap:
+        25px;
+
+    position:
+        relative;
+
+    z-index:
+        20;
+
+}
+
+
+.game-logo {
+
+    font-size:
+        1.35rem;
+
+    font-weight:
+        900;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.top-stats {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    flex:
+        1;
+
+}
+
+
+.top-stat {
+
+    background:
+        #1c2b20;
+
+    border:
+        1px solid #354b39;
+
+    border-radius:
+        7px;
+
+    padding:
+        7px 12px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    min-width:
+        100px;
+
+}
+
+
+.top-stat span {
+
+    font-size:
+        0.9rem;
+
+}
+
+
+.top-stat strong {
+
+    font-size:
+        0.85rem;
+
+}
+
+
+.day-display {
+
+    background:
+        #263b2b;
+
+    border:
+        1px solid #49604c;
+
+    padding:
+        8px 14px;
+
+    border-radius:
+        7px;
+
+    font-size:
+        0.75rem;
+
+}
+
+
+.day-display strong {
+
+    color:
+        #9fe870;
+
+    font-size:
+        1rem;
+
+}
+
+
+.end-day-btn {
+
+    border:
+        none;
+
+    background:
+        #e8b84d;
+
+    color:
+        #1d2618;
+
+    font-weight:
+        800;
+
+    padding:
+        10px 15px;
+
+    border-radius:
+        7px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.end-day-btn:hover {
+
+    background:
+        #f5cc70;
+
+}
+
+
+/* =====================================
+   MAIN GAME
+===================================== */
+
+.game-container {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        105px 1fr;
+
+    height:
+        calc(100vh - 160px);
+
+}
+
+
+/* =====================================
+   TOOL PANEL
+===================================== */
+
+.tool-panel {
+
+    background:
+        #101a13;
+
+    border-right:
+        2px solid #304936;
+
+    padding:
+        8px;
+
+    z-index:
+        10;
+
+    overflow-y:
+        auto;
+
+}
+
+
+.tool-title {
+
+    font-size:
+        0.55rem;
+
+    text-align:
+        center;
+
+    color:
+        #839783;
+
+    padding:
+        8px 0;
+
+    border-bottom:
+        1px solid #304936;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.tool-button {
+
+    width:
+        100%;
+
+    min-height:
+        68px;
+
+    background:
+        #1a281e;
+
+    border:
+        1px solid #334936;
+
+    color:
+        #d9e6d9;
+
+    border-radius:
+        6px;
+
+    margin-bottom:
+        6px;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        3px;
+
+    transition:
+        0.15s;
+
+}
+
+
+.tool-button:hover {
+
+    background:
+        #293c2c;
+
+    border-color:
+        #71916e;
+
+}
+
+
+.tool-button.selected {
+
+    background:
+        #3d583a;
+
+    border:
+        2px solid #b5df68;
+
+    box-shadow:
+        0 0 10px rgba(181,223,104,0.25);
+
+}
+
+
+.tool-icon {
+
+    font-size:
+        1.65rem;
+
+}
+
+
+.tool-button span:last-child {
+
+    font-size:
+        0.65rem;
+
+}
+
+
+.tool-divider {
+
+    height:
+        1px;
+
+    background:
+        #304936;
+
+    margin:
+        10px 0;
+
+}
+
+
+/* =====================================
+   CITY WORLD
+===================================== */
+
+.city-world {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        #4e8f46;
+
+}
+
+
+#cityCanvas {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    cursor:
+        crosshair;
+
+}
+
+
+.map-controls {
+
+    position:
+        absolute;
+
+    right:
+        18px;
+
+    top:
+        18px;
+
+    z-index:
+        10;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+}
+
+
+.map-controls button {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border:
+        1px solid #526e51;
+
+    background:
+        #152119;
+
+    color:
+        white;
+
+    font-size:
+        1.2rem;
+
+    border-radius:
+        5px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.map-controls button:hover {
+
+    background:
+        #314b35;
+
+}
+
+
+.city-hint {
+
+    position:
+        absolute;
+
+    bottom:
+        12px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(13, 24, 16, 0.85);
+
+    border:
+        1px solid #49604c;
+
+    padding:
+        7px 14px;
+
+    border-radius:
+        20px;
+
+    font-size:
+        0.7rem;
+
+    color:
+        #c9d8c9;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================
+   BUILDING INFO
+===================================== */
+
+.building-info {
+
+    height:
+        90px;
+
+    background:
+        #111b14;
+
+    border-top:
+        2px solid #304936;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+    padding:
+        10px 25px;
+
+}
+
+
+.building-info-icon {
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    background:
+        #263b2b;
+
+    border:
+        1px solid #50694f;
+
+    border-radius:
+        8px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    font-size:
+        2rem;
+
+}
+
+
+.building-info-main {
+
+    min-width:
+        200px;
+
+}
+
+
+.building-info-main h2 {
+
+    font-size:
+        1rem;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.building-info-main p {
+
+    color:
+        #829382;
+
+    font-size:
+        0.7rem;
+
+}
+
+
+.info-stat {
+
+    border-left:
+        1px solid #304936;
+
+    padding:
+        0 20px;
+
+    min-width:
+        100px;
+
+}
+
+
+.info-stat span {
+
+    display:
+        block;
+
+    color:
+        #819181;
+
+    font-size:
+        0.65rem;
+
+    margin-bottom:
+        4px;
+
+}
+
+
+.info-stat strong {
+
+    font-size:
+        0.9rem;
+
+}
+
+
+.city-message {
+
+    position:
+        fixed;
+
+    left:
+        50%;
+
+    bottom:
+        105px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #152219;
+
+    border:
+        1px solid #6d8b68;
+
+    padding:
+        10px 18px;
+
+    border-radius:
+        7px;
+
+    z-index:
+        100;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity 0.2s;
+
+}
+
+
+.city-message.show {
+
+    opacity:
+        1;
+
+}

@@ -1,57 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>CityForge - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
-    <div class="finance-panel">
 
-    <h2>💰 City Treasury</h2>
+    <header class="navbar">
 
-    <div class="finance-grid">
+        <a href="index.html" class="logo">
+            🏙️ CityForge
+        </a>
 
-        <div class="finance-card">
-            <span>Daily Income</span>
-            <strong id="dailyIncome">₹0</strong>
-        </div>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="city.html">City Builder</a>
+            <a href="buildings.html">Buildings</a>
+        </nav>
 
-        <div class="finance-card">
-            <span>Daily Expenses</span>
-            <strong id="dailyExpenses">₹0</strong>
-        </div>
-
-        <div class="finance-card">
-            <span>Daily Profit</span>
-            <strong id="dailyProfit">₹0</strong>
-        </div>
-
-    </div>
-
-</div>
+    </header>
 
 
-<div class="finance-panel">
+    <main class="container">
 
-    <h2>📜 Financial History</h2>
+        <section class="page-header">
 
-    <div id="transactions">
+            <div>
+                <h1>City Dashboard</h1>
+                <p>Monitor and manage your city.</p>
+            </div>
 
-        <p>No transactions yet.</p>
+            <button id="nextDayBtn" class="btn btn-primary">
+                ☀️ End Day
+            </button>
 
-    </div>
-
-</div>
+        </section>
 
 
-<div id="message"></div>
+        <!-- Statistics -->
 
-<button
-    type="button"
-    onclick="endDay()"
->
-    ☀️ End Day
-</button>
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span>💰 Treasury</span>
+                <strong id="money">₹0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>👥 Population</span>
+                <strong id="population">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>😊 Happiness</span>
+                <strong id="happiness">0%</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🌫️ Pollution</span>
+                <strong id="pollution">0%</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⚡ Electricity</span>
+                <strong id="electricity">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>📅 Day</span>
+                <strong id="day">1</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Economy -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <h2>💰 Daily Economy</h2>
+            </div>
+
+            <div class="economy-grid">
+
+                <div class="economy-card income">
+                    <span>Daily Income</span>
+                    <strong id="dailyIncome">₹0</strong>
+                </div>
+
+                <div class="economy-card expense">
+                    <span>Daily Expenses</span>
+                    <strong id="dailyExpenses">₹0</strong>
+                </div>
+
+                <div class="economy-card profit">
+                    <span>Daily Profit</span>
+                    <strong id="dailyProfit">₹0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Building summary -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>🏗️ City Buildings</h2>
+
+                <a href="buildings.html" class="text-link">
+                    Manage →
+                </a>
+
+            </div>
+
+
+            <div id="buildingSummary" class="building-summary">
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent transactions -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <h2>📜 Recent Financial Activity</h2>
+            </div>
+
+            <div id="transactions" class="transactions">
+
+            </div>
+
+        </section>
+
+
+        <div id="message" class="message"></div>
+
+    </main>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+
 </body>
+
 </html>

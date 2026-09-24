@@ -1,0 +1,187 @@
+@media (max-width: 1000px) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+        padding:
+            14px 5%;
+
+    }
+
+
+    .navbar nav {
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+
+    }
+
+
+    .page-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .city-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .building-panel {
+
+        order:
+            1;
+
+    }
+
+
+    .city-area {
+
+        order:
+            2;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width:
+            94%;
+
+        margin-top:
+            20px;
+
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .economy-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .navbar nav a {
+
+        padding:
+            8px;
+
+        font-size:
+            0.85rem;
+
+    }
+
+
+    .city-grid {
+
+        gap:
+            2px;
+
+        padding:
+            6px;
+
+    }
+
+
+    .city-cell {
+
+        border-radius:
+            3px;
+
+    }
+
+
+    .building-options {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .table-container {
+
+        font-size:
+            0.85rem;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .stat-card {
+
+        padding:
+            12px;
+
+    }
+
+
+    .stat-card strong {
+
+        font-size:
+            1rem;
+
+    }
+
+
+    .navbar nav {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+}

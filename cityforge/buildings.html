@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CityForge - Buildings</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        🏙️ CityForge
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            Dashboard
+        </a>
+
+        <a href="city.html">
+            City Builder
+        </a>
+
+        <a href="buildings.html" class="active">
+            Buildings
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <section class="page-header">
+
+        <div>
+
+            <h1>🏢 Building Management</h1>
+
+            <p>
+                Create, view, update and delete city buildings.
+            </p>
+
+        </div>
+
+        <button
+            id="addBuildingBtn"
+            class="btn btn-primary"
+        >
+            + Add Building
+        </button>
+
+    </section>
+
+
+    <!-- Search and filters -->
+
+    <section class="filter-bar">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="🔍 Search buildings..."
+        >
+
+
+        <select id="typeFilter">
+
+            <option value="all">
+                All Types
+            </option>
+
+        </select>
+
+
+        <select id="sortSelect">
+
+            <option value="newest">
+                Newest
+            </option>
+
+            <option value="oldest">
+                Oldest
+            </option>
+
+            <option value="cost-high">
+                Cost: High → Low
+            </option>
+
+            <option value="cost-low">
+                Cost: Low → High
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <!-- Building table -->
+
+    <section class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Building</th>
+
+                    <th>Location</th>
+
+                    <th>Cost</th>
+
+                    <th>Population</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="buildingTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <div
+        id="emptyState"
+        class="empty-state hidden"
+    >
+
+        <div>🏗️</div>
+
+        <h2>No buildings found</h2>
+
+        <p>
+            Build your first building from the City Builder.
+        </p>
+
+    </div>
+
+
+    <!-- Modal -->
+
+    <div
+        id="buildingModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">
+                    Add Building
+                </h2>
+
+                <button
+                    id="closeModal"
+                    class="close-btn"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="buildingForm">
+
+                <input
+                    type="hidden"
+                    id="buildingId"
+                >
+
+
+                <label for="buildingType">
+                    Building Type
+                </label>
+
+                <select
+                    id="buildingType"
+                    required
+                >
+
+                </select>
+
+
+                <label for="buildingRow">
+                    Row
+                </label>
+
+                <input
+                    type="number"
+                    id="buildingRow"
+                    min="1"
+                    max="10"
+                    required
+                >
+
+
+                <label for="buildingColumn">
+                    Column
+                </label>
+
+                <input
+                    type="number"
+                    id="buildingColumn"
+                    min="1"
+                    max="10"
+                    required
+                >
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelModal"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Save
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div id="message" class="message"></div>
+
+</main>
+
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/buildings.js"></script>
+
+</body>
+
+</html>

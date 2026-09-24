@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CityForge</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/city.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body class="game-body">
+
+
+<header class="game-header">
+
+    <div class="game-logo">
+        🏙️ <span>CityForge</span>
+    </div>
+
+
+    <div class="top-stats">
+
+        <div class="top-stat">
+            <span>💰</span>
+            <strong id="money">₹100,000</strong>
+        </div>
+
+        <div class="top-stat">
+            <span>👥</span>
+            <strong id="population">0</strong>
+        </div>
+
+        <div class="top-stat">
+            <span>😊</span>
+            <strong id="happiness">50%</strong>
+        </div>
+
+        <div class="top-stat">
+            <span>🌫️</span>
+            <strong id="pollution">0%</strong>
+        </div>
+
+        <div class="top-stat">
+            <span>⚡</span>
+            <strong id="electricity">100</strong>
+        </div>
+
+        <div class="day-display">
+            DAY <strong id="day">1</strong>
+        </div>
+
+    </div>
+
+
+    <button
+        id="nextDayBtn"
+        class="end-day-btn"
+    >
+        ☀️ End Day
+    </button>
+
+</header>
+
+
+<main class="game-container">
+
+
+    <!-- LEFT TOOLBAR -->
+
+    <aside class="tool-panel">
+
+        <div class="tool-title">
+            <span>CONSTRUCTION</span>
+        </div>
+
+
+        <button
+            class="tool-button selected"
+            data-type="house"
+        >
+            <span class="tool-icon">🏠</span>
+            <span>House</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="apartment"
+        >
+            <span class="tool-icon">🏢</span>
+            <span>Apartment</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="shop"
+        >
+            <span class="tool-icon">🏪</span>
+            <span>Shop</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="factory"
+        >
+            <span class="tool-icon">🏭</span>
+            <span>Factory</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="park"
+        >
+            <span class="tool-icon">🌳</span>
+            <span>Park</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="school"
+        >
+            <span class="tool-icon">🏫</span>
+            <span>School</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="hospital"
+        >
+            <span class="tool-icon">🏥</span>
+            <span>Hospital</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            data-type="powerPlant"
+        >
+            <span class="tool-icon">⚡</span>
+            <span>Power</span>
+        </button>
+
+
+        <div class="tool-divider"></div>
+
+
+        <button
+            class="tool-button road-tool"
+            data-type="road"
+        >
+            <span class="tool-icon">🛣️</span>
+            <span>Road</span>
+        </button>
+
+
+        <button
+            class="tool-button"
+            id="demolishTool"
+        >
+            <span class="tool-icon">🔨</span>
+            <span>Remove</span>
+        </button>
+
+    </aside>
+
+
+    <!-- CITY -->
+
+    <section class="city-world">
+
+
+        <div class="map-controls">
+
+            <button id="zoomIn">+</button>
+
+            <button id="zoomOut">−</button>
+
+            <button id="resetView">⌂</button>
+
+        </div>
+
+
+        <canvas
+            id="cityCanvas"
+        ></canvas>
+
+
+        <div class="city-hint">
+            Click a tile to build · Click a building to inspect
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<!-- BOTTOM BUILDING INFO -->
+
+<section class="building-info">
+
+    <div class="building-info-icon" id="infoIcon">
+        🏠
+    </div>
+
+
+    <div class="building-info-main">
+
+        <h2 id="infoName">
+            House
+        </h2>
+
+        <p id="infoDescription">
+            Residential building
+        </p>
+
+    </div>
+
+
+    <div class="info-stat">
+
+        <span>Cost</span>
+
+        <strong id="infoCost">
+            ₹5,000
+        </strong>
+
+    </div>
+
+
+    <div class="info-stat">
+
+        <span>Population</span>
+
+        <strong id="infoPopulation">
+            +50
+        </strong>
+
+    </div>
+
+
+    <div class="info-stat">
+
+        <span>Happiness</span>
+
+        <strong id="infoHappiness">
+            +2
+        </strong>
+
+    </div>
+
+
+    <div class="info-stat">
+
+        <span>Pollution</span>
+
+        <strong id="infoPollution">
+            0
+        </strong>
+
+    </div>
+
+
+    <div class="info-stat">
+
+        <span>Power</span>
+
+        <strong id="infoPower">
+            -2
+        </strong>
+
+    </div>
+
+</section>
+
+
+<div
+    id="cityMessage"
+    class="city-message"
+></div>
+
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/city.js"></script>
+
+</body>
+
+</html>
